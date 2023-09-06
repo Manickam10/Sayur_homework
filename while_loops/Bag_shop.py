@@ -22,7 +22,7 @@ while (totalSales < 10000 or totalBagsSold < 10) :
         whiteBags -= white_bag_purchase
     else:
         print("Out of stock")
-        continue
+        
 
 
 
