@@ -8,7 +8,7 @@ More than Rs Rs 15,00,000-30%    """
 
 # Get the salary and deductions from the user
 salary = float(input("Enter your salary: "))
-income_slabs=[300000,600000,900000,1200000,1500000]
+income_slabs=[0,300000,600000,900000,1200000,1500000]
 tax_percentage=[0,0.05,0.1,0.15,0.2,0.3]
 tax=0
 prev_slab=0
