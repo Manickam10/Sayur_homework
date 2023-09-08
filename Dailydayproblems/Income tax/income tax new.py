@@ -23,19 +23,19 @@ if Regime == '1':
         taxable_income = salary - deductions
 
         if 0 < age <= 60:
-            slabs = [250000, 500000, 1000000]
+            slabs = [0,250000, 500000, 1000000]
             rates = [0,0.05, 0.2, 0.3]
             tax = calculate_tax(taxable_income, slabs, rates)
             print("Income Tax: Rs", tax)
 
         elif 60 < age <= 80:
-            slabs = [300000, 500000, 1000000]
+            slabs = [0,300000, 500000, 1000000]
             rates = [0,0.05, 0.2, 0.3]
             tax = calculate_tax(taxable_income, slabs, rates)
             print("Income Tax: Rs", tax)
 
         elif age > 80:
-            slabs = [500000, 1000000]
+            slabs = [0,500000, 1000000]
             rates = [0,0.2, 0.3]
             tax = calculate_tax(taxable_income, slabs, rates)
             print("Income Tax: Rs", tax)
@@ -52,7 +52,7 @@ elif Regime == '2':
 
     if salary >= 0 and deductions >= 0:
         taxable_income = salary - deductions
-        slabs = [250000, 500000, 750000, 1000000, 1250000, 1500000]
+        slabs = [0,250000, 500000, 750000, 1000000, 1250000, 1500000]
         rates = [0,0.05, 0.1, 0.15,0.2, 0.25, 0.3]
         tax = calculate_tax(taxable_income, slabs, rates)
         print("Income Tax: Rs", tax)
