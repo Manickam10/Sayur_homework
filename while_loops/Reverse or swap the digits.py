@@ -12,8 +12,14 @@ def reverse_digit(number):
 
 
 #Get the input number from the user
-number = int(input('Enter the number you want to reverse '))
+number = int(input('Enter the number you want to reverse: '))
 #Passing that number to the function
 reversed_number = reverse_digit(number)
 #output
 print(f'Reversed Number is {reversed_number}')
+
+#output
+"""
+Enter the number you want to reverse: 1234
+Reversed Number is 4321
+"""
