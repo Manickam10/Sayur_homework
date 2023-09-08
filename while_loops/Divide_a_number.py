@@ -2,12 +2,12 @@
 Divide again by 3 and print the result. Keep dividing until the number is less than 3. 
 Print the number of times the number was divided. """
 
-number=int(input('Enter any number')) #Prompts the user to enter a number
+number=int(input('Enter any number: ')) #Prompts the user to enter a number
 count=0  #Initializing count=0
 
 if number==0 or number<0:
     print('Enter a valid number')
-elif number>0 or number<3:
+elif number>0 and number<3:
     print('Enter a number greater than 3')
 else:
     while number>=3:# it will keep dividing the number by 3 until the result is less than 3
@@ -18,3 +18,12 @@ else:
 #output
 print(f"The final result is: {number:.2f} ,Which is less than 3")
 print(f"The number was divided {count} times.")
+
+#output
+"""
+Enter any number: 13
+Result after 1 division(s): 4.33
+Result after 2 division(s): 1.44
+The final result is: 1.44 ,Which is less than 3
+The number was divided 2 times.
+"""
