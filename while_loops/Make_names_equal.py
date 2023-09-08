@@ -14,12 +14,19 @@ def Make_names_equal(name1,name2):
     return name1,name2
 
 #Prompts the user to enter two different names
-name1=input('Enter first name ')
-name2=input('Enter second name ')
+name1=input('Enter first name: ')
+name2=input('Enter second name: ')
 if len(name1)==len(name2):
     print('The two names length are equal ,please enter different names')
 else:
     Name1,Name2=Make_names_equal(name1,name2)
     print(Name1)
     print(Name2)
+#output
+"""
+Enter first name: cat
+Enter second name: arrow
+cataa
+arrow
+"""
            
