@@ -10,8 +10,8 @@ totalSales , totalBagsSold = 0,0
 redbag_rate,Whitebag_rate=1000,1500
 while (totalSales < 10000 or totalBagsSold < 10) :
     #Ask customer for input
-    red_bag_purchase=int(input("Enter how many red bags you are going to buy"))
-    white_bag_purchase=int(input("Enter how many white bags you are going to buy"))
+    red_bag_purchase=int(input("Enter how many red bags you are going to buy: "))
+    white_bag_purchase=int(input("Enter how many white bags you are going to buy: "))
     if red_bag_purchase <= redBags and white_bag_purchase <= whiteBags:
         #calculate total cost for the bags
         total_cost = (red_bag_purchase * redbag_rate) + (white_bag_purchase * Whitebag_rate)
@@ -23,7 +23,16 @@ while (totalSales < 10000 or totalBagsSold < 10) :
     else:
         print("Out of stock")
         
-
-
-
 print ( f"total sales={totalSales} \ntotal number of bags sold={totalBagsSold}")   
+
+#output
+"""
+Enter how many red bags you are going to buy: 2
+Enter how many white bags you are going to buy: 2
+Enter how many red bags you are going to buy: 2
+Enter how many white bags you are going to buy: 2
+Enter how many red bags you are going to buy: 1
+Enter how many white bags you are going to buy: 3
+total sales=15500
+total number of bags sold=12
+"""
