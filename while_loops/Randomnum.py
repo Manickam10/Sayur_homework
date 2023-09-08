@@ -23,3 +23,24 @@ while(True):
 
 print("You guessed the number correctly")
 print ("User guessed the number in ", attempt, "attempts")
+
+#output
+"""
+Enter your guessed number: 34
+Low
+Enter your guessed number: 56
+High
+Enter your guessed number: 40
+Low
+Enter your guessed number: 46
+Low
+Enter your guessed number: 49
+Low
+Enter your guessed number: 50
+Low
+Enter your guessed number: 55
+High
+Enter your guessed number: 53
+You guessed the number correctly
+User guessed the number in  7 attempts
+"""
