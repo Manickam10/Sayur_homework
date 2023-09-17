@@ -19,7 +19,7 @@ while current_line <= max_line:
         break
 
 #printing remaining half of diamond shape
-current_line = max_line -1
+current_line = max_line - 1
 while current_line <= max_line:
     spaces = " " * (max_line - current_line)
     diamonds = "$ " * (current_line)
