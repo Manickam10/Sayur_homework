@@ -80,9 +80,10 @@ def top_3_marks(marks):
     sorted_marks = sorted(marks, reverse=True)[:3]
     return sorted_marks
 
-passing_marks=[]
+
 # Function to calculate average marks with passing mark
 def avg_marks_with_passing(marks, passing_mark=50):
+    passing_marks=[]
     for mark in marks:
         if mark >= passing_mark:
             passing_marks.append(mark)
@@ -127,13 +128,13 @@ for department, info in departments.items():
     for mark in info['Student Marks']:
         if mark < 50:
             failed_students.append(mark)
-            num_failed_students = len(failed_students)
+            
+        num_failed_students = len(failed_students)
 
-    if avg_mark > best_avg_mark or best_class is None:
+
+    if avg_mark >= best_avg_mark and num_failed_students < least_num_failed_students:
         best_avg_mark = avg_mark
         best_class = department
-    elif avg_mark == best_avg_mark and num_failed_students < least_num_failed_students:
-        best_class = department
-        least_num_failed_students = failed_students
+        least_num_failed_students = num_failed_students
 
 print(f"\nClass with the Best Average Mark and Least Number of Failed Students: {best_class}")
