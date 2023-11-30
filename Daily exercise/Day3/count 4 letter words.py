@@ -23,9 +23,7 @@ try:
                 else:
                     Four_letter_word_counts[word] = 1
 
-        # Move the file cursor to the end
-        # file.seek(0, 2)
-
+    
         # Write the summary at the end of the file
         file.write("\n\nSummary of 4 letter words:\n")
         for word, count in Four_letter_word_counts.items():
