@@ -24,7 +24,7 @@ def roll_dice():
     return random.randint(1,6)
 
 if __name__ =="__main__":
-    #Initializing board
+    #Initializing or creating board
     board=[]
     for i in range(6):
         col_board=[]
@@ -38,7 +38,7 @@ if __name__ =="__main__":
     while player_A_score < 5 and player_B_score < 5:
         
         #Player A's turn
-        user_input_a = input("Player A,Press Enter roll(r)...")
+        user_input_a = input("Player A, Enter roll(r)...")
         if user_input_a.lower() == 'r':
             row_A = roll_dice()-1
             col_A= roll_dice()-1
@@ -61,7 +61,7 @@ if __name__ =="__main__":
             
         
         #Player B's turn
-        user_input_b = input("Player B,Press Enter roll(r)...")
+        user_input_b = input("Player B, Enter roll(r)...")
         if user_input_b.lower() == 'r':
             row_B = roll_dice() - 1
             col_B = roll_dice() - 1
@@ -85,21 +85,40 @@ if __name__ =="__main__":
             break
 
 #output
-# Player A,Press Enter roll(r)...r
+# Player A, Enter roll(r)...r
+# * A * * * *
 # * * * * * *
 # * * * * * *
 # * * * * * *
 # * * * * * *
 # * * * * * *
-# A * * * * *
 
-# Score:A - 0,Score:B - 0        
-# Player B,Press Enter roll(r)...r
+# Score:A - 0,Score:B - 0   
+# Player B, Enter roll(r)...r
+# * A * * * *
 # * * * * * *
-# * * B * * *
+# B * * * * *
 # * * * * * *
 # * * * * * *
 # * * * * * *
-# A * * * * *
 
 # Score: A - 0, B - 0
+# Player A, Enter roll(r)...r
+# * A * * * *
+# * * * * * *
+# B * * * * *
+# * * * * * *
+# * A * * * *
+# * * * * * *
+
+# Score:A - 0,Score:B - 0
+# Player B, Enter roll(r)...r
+# * A * * * *
+# * * * * * *
+# B * * * * *
+# B * * * * *
+# * A * * * *
+# * * * * * *
+
+# Score: A - 0, B - 0
+# Player A, Enter roll(r)...
