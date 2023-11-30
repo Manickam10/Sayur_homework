@@ -16,12 +16,12 @@ import random
 #Function to print the board      
 def print_board(board):
     for row in board:
-        print(' '.join(row))
+        print(' '.join(row))  #joins the elements of a row with space in between
     print()
 
 #Function to roll the dice
 def roll_dice():
-    return random.randint(1,6)
+    return random.randint(1,6) # returns a random number between 1 and 6
 
 if __name__ =="__main__":
     #Initializing or creating board
@@ -41,8 +41,10 @@ if __name__ =="__main__":
         user_input_a = input("Player A, Enter roll(r)...")
         if user_input_a.lower() == 'r':
             row_A = roll_dice()-1
-            col_A= roll_dice()-1
-            if board[row_A][col_A] == 'B':
+            col_A = roll_dice()-1
+            print(f"first roll:{row_A+1},second roll:{col_A+1}")
+            #if  player B already has their initial in the same row,col add a point to A and change the initial to A.
+            if board[row_A][col_A] == 'B': 
                 player_A_score += 1
                 board[row_A][col_A] = 'A'
                 print_board(board) 
@@ -65,7 +67,8 @@ if __name__ =="__main__":
         if user_input_b.lower() == 'r':
             row_B = roll_dice() - 1
             col_B = roll_dice() - 1
-
+            print(f"\nfirst roll:{row_B+1},second roll:{col_B+1}")
+            #if  player A already has their initial in the same row,col add a point to B and change the initial to B.
             if board[row_B][col_B] == 'A':
                 player_B_score += 1
                 board[row_B][col_B] = 'B'
@@ -86,39 +89,45 @@ if __name__ =="__main__":
 
 #output
 # Player A, Enter roll(r)...r
-# * A * * * *
+# first roll:3,second roll:1
 # * * * * * *
 # * * * * * *
+# A * * * * *
 # * * * * * *
 # * * * * * *
 # * * * * * *
 
 # Score:A - 0,Score:B - 0   
 # Player B, Enter roll(r)...r
-# * A * * * *
+
+# first roll:4,second roll:5
 # * * * * * *
-# B * * * * *
 # * * * * * *
+# A * * * * *
+# * * * * B *
 # * * * * * *
 # * * * * * *
 
 # Score: A - 0, B - 0
 # Player A, Enter roll(r)...r
-# * A * * * *
+# first roll:1,second roll:4
+# * * * A * *
 # * * * * * *
-# B * * * * *
+# A * * * * *
+# * * * * B *
 # * * * * * *
-# * A * * * *
 # * * * * * *
 
 # Score:A - 0,Score:B - 0
 # Player B, Enter roll(r)...r
-# * A * * * *
+
+# first roll:6,second roll:2
+# * * * A * *
 # * * * * * *
-# B * * * * *
-# B * * * * *
-# * A * * * *
+# A * * * * *
+# * * * * B *
 # * * * * * *
+# * B * * * *
 
 # Score: A - 0, B - 0
 # Player A, Enter roll(r)...
