@@ -32,7 +32,7 @@ while points<=50:
     
     else:
         print("Enter Roll or quit (r or q)!!!")
-        break
+        continue
 
 if points>= 50:
     print(f"Congratulations! You reached {points} points and won the game.")

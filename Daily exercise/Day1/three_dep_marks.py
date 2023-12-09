@@ -10,45 +10,24 @@ Find the avg mark of students with passing mark in each class and the classes co
 Find which class has the best average mark and least number of failed students.
 
 """
-""" def avg(dept):
-    pass_stu=[]
-    fail_stu=0
-    for i in dept:
-        j=int(i)
-        if j >= 50:  #pass_mark = 50
-            pass_stu.append[j]
-        else:
-            fail_stu+=1
-    total_marks = sum(pass_stu)
-    return total_marks/len(pass_stu),fail_stu
+
+# Function to find the top N marks
+def top_3_marks(marks):
+    sorted_marks = sorted(marks, reverse=True)[:3]
+    return sorted_marks
 
 
+# Function to calculate average marks with passing mark
+def avg_marks_with_passing(marks, passing_mark=50):
+    passing_marks=[]
+    for mark in marks:
+        if mark >= passing_mark:
+            passing_marks.append(mark)
+    if passing_marks:
+        return sum(passing_marks) / len(passing_marks)
+    else:
+        return 0
 
-
-ECE = input(print("Enter ECE students python marks in the final exam: "))
-ece = ECE.split(",")
-
-CSE = input(print("Enter CSE students python marks in the final exam: "))
-cse = CSE.split(",")
-
-EEE = input(print("Enter EEE students python marks in the final exam: "))
-eee = EEE.split(",")
-
-Combined = ece + cse + eee
-top_ece = sorted(ece,reverse=True)[:3]
-top_cse = sorted(cse,reverse=True)[:3]
-top_eee = sorted(eee,reverse=True)[:3]
-top_combined = sorted(Combined,reverse=True)[:3]
-
-
-avg_passing_student_ece,fail_student_of_ece = avg(ece)
-avg_passing_student_cse,fail_student_of_cse = avg(cse)
-avg_passing_student_eee,fail_student_of_eee = avg(eee)
-avg_passing_student_combined ,fail_student_of__combined= avg(Combined)
-
-best_avg=max(avg_passing_student_cse,avg_passing_student_ece,avg_passing_student_eee,avg_passing_student_combined)
-least_fail=min(fail_student_of_cse,fail_student_of__combined,fail_student_of_ece,fail_student_of_eee)
-print(f"The class with best avg mark is ") """
 
 # Initialize an empty dictionary to store department information
 departments = {}
@@ -75,22 +54,6 @@ for i in range(3):
         'Student Marks': student_marks
     }
 
-# Function to find the top N marks
-def top_3_marks(marks):
-    sorted_marks = sorted(marks, reverse=True)[:3]
-    return sorted_marks
-
-
-# Function to calculate average marks with passing mark
-def avg_marks_with_passing(marks, passing_mark=50):
-    passing_marks=[]
-    for mark in marks:
-        if mark >= passing_mark:
-            passing_marks.append(mark)
-    if passing_marks:
-        return sum(passing_marks) / len(passing_marks)
-    else:
-        return 0
 
 # Initialize variables for combined information
 all_student_marks = []
@@ -132,7 +95,7 @@ for department, info in departments.items():
         num_failed_students = len(failed_students)
 
 
-    if avg_mark >= best_avg_mark and num_failed_students < least_num_failed_students:
+    if avg_mark >= best_avg_mark and num_failed_students <= least_num_failed_students:
         best_avg_mark = avg_mark
         best_class = department
         least_num_failed_students = num_failed_students
